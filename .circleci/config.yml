@@ -7,10 +7,10 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7
-    working_directory: ~/rails-docker-nori2/src
+    working_directory: ~/desktop/docker_rails/rails-docker-nori2/src
     steps:
       - checkout:
-        path: ~/rails-docker-nori2
+        path: ~/desktop/docker_rails/rails-docker-nori2
       - ruby/install-deps
 
 test:
@@ -26,10 +26,10 @@ test:
     BUNDLE_RETRY: "3"
     APP_DATABASE_HOST: "127.0.0.1"
     RAILS_ENV: test
-  working_directory: ~/rails-docker-nori2/src 
+  working_directory: ~/desktop/docker_rails/rails-docker-nori2/src 
   steps:
     - checkout:
-        path: ~/rails-docker-nori2
+        path: ~/desktop/docker_rails/rails-docker-nori2
     - ruby/install-deps
     - run:
         name: Database setup
