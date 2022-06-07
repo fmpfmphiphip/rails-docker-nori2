@@ -10,7 +10,7 @@ jobs:
     working_directory: ~/rails-docker-nori2/src
     steps:
       - checkout:
-        path: ~/rails-docker-nori2
+          path: ~/rails-docker-nori2
       - ruby/install-deps
 
   test:
